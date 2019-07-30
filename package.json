@@ -1,0 +1,16 @@
+{
+  "name": "nai",
+  "version": "1.0.0",
+  "description": "Nainoa's Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Owens",
+  "license": "ISC",
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.22.7"
+  }
+}

@@ -1,0 +1,129 @@
+/* Theme Styles */
+$theme-blue: #011627;
+$theme-white: #FDFFFC;
+$theme-aqua: #2EC4B6;
+$theme-rose: #E71D36;
+$theme-yellow: #FF9F1C;
+
+
+/* Universal Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main-nav {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.main-header-container {
+    padding: 0 5%;
+}
+
+.main-container,
+.main-footer-container {
+    padding: 3% 5%;
+}
+
+/* Font Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rokkitt', serif;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+/* Navigation */
+
+.nav-logo {
+    display: block;
+    text-align: center;
+}
+
+.nav-flex-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: .5rem .75rem;
+}
+
+/* Main Header */
+
+.carousel {
+    //background: $theme-white;
+    background: url("../images/header.jpg") no-repeat center;
+    background-size: cover;
+  }
+  
+  .carousel-cell {
+    margin-right: 30px;
+    overflow: hidden;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    height: 35vh;
+  }
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+
+    .main-nav {
+        padding-top: 5%;
+        padding-left: 8%;
+        padding-right: 8%;
+        
+    }
+
+    .main-header-container {
+        padding: 0 8%;
+    }
+    
+    .main-container,
+    .main-footer-container {
+        padding: 5% 8%;
+    }
+
+    .nav-flex-container {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .nav-link {
+        display: block;
+        width: 20%;
+        text-align: center;
+        padding: .5rem .75rem;
+    }
+}
