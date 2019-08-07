@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Rokkitt&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>NSpeier</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Flickity Carousel -->
@@ -20,72 +20,170 @@
             <a href="" >
                 <img src="images/logo.png" alt="Nai Logo" title="Nai Logo">
             </a>
+            
         </div>
         <ul class="nav-flex-container">
-            <a href="" class="nav-link">
+            <a href="#" class="nav-link">
                 <li>
                     <i class="fas fa-home"></i>
                     Home
                 </li>
             </a>
-            <a href="" class="nav-link">
+            <a href="#gallery" class="nav-link">
                 <li>
                     <i class="fas fa-spray-can"></i>
                     Gallery
                 </li>
             </a>
-            <a href="" class="nav-link">
+            <a href="#what-i-do" class="nav-link">
                 <li>
                     <i class="fas fa-project-diagram"></i>
-                    Projects
+                    What I Do
                 </li>
             </a>
-            <a href="" class="nav-link">
+            <a href="#about-me" class="nav-link">
                 <li>
                     <i class="fas fa-smile-beam"></i>
                     About Me
                 </li>
             </a>
-            <a href="" class="nav-link">
+            <a href="#connect" class="nav-link">
                 <li>
                     <i class="fas fa-address-book"></i>
                     Contact Me
                 </li>
             </a>
         </ul>
+        <!-- End of nav-flex-container-->
     </nav>
+    <!-- End of main-nav -->
 
     <header class="main-header">
         <div class="main-header-container">
-            <div class="carousel">
-                <div class="carousel-cell">
-                    <img src="images/nspeier.png" alt="orange tree" />
-                </div>
-                <div class="carousel-cell">
-                    <img src="images/nspeier2.png" alt="drizzle" />
-                </div>
-                <div class="carousel-cell">
-                    <img src="images/nspeier3.png" alt="cat nose" />
-                </div>
-                <div class="carousel-cell">
-                    <img src="images/nspeier4.png" alt="contrail" />
-                </div>
+            <div class="header-content">
+                <h1>Inspiring Through Creativity</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quas hic nobis totam quia atque id quisquam doloremque rem eos. Unde eligendi maxime consectetur reprehenderit quas repellat magnam odio temporibus?</p>
+                <h4>~ Nainoa Speier</h4>
             </div>
-
+            <!-- End of header content -->
+            <div class="header-side-content">
+                <a href="#about-me">
+                    <span>Get in touch</span>
+                </a>
+            </div>
+            <!-- End of header-side-content -->
         </div>
+        <!-- End of main-header-container -->
     </header>
 
     <main class="main">
         <div class="main-container">
-            <section class="sec-one-container">
-
+            <section class="about-me" id="about-me">
+                <div class="about-me-content">
+                    <h1>A Little About Me</h1>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi modi, at eveniet quo similique ab laudantium distinctio molestias quidem aliquid obcaecati soluta. Dolorem rerum accusantium illum veniam modi! Praesentium, aliquid!</p>
+                </div>
+                <!-- End of about-me-content-->
+                <div class="about-me-side-content">
+                    <img src="images/nspeier4.png" alt="">
+                </div>
+                <!-- End of about-me-side-content -->
             </section>
-            <section class="sec-two-container">
+            <!-- End of about-me -->    
 
+            <section class="what-i-do" id="what-i-do">
+                <div class="what-i-do-content">
+                        <h1>What I Do</h1>
+                        <hr>
+                </div>
+                <!-- End of what-i-do-content -->
+                <div class="what-container">
+                    <div class="what-cards">
+                        <div class="imgBx">
+                            <div>
+                                <img src="images/surfboard.png" alt="">
+                                <h2>Art Style 1</h2>
+                            </div>
+                            <!-- End of div -->
+                        </div>
+                        <!-- End of imgBx -->
+                        <div class="overlay"></div>
+                        <div class="what-content">
+                            <h2>Art Style 1</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, laborum aperiam. Perferendis ab illum magni, deleniti adipisci cum sequi officiis voluptatem, unde ratione tempore accusamus asperiores nostrum minima, provident quae?</p>
+                        </div>
+                        <!-- End of what-content -->
+                    </div>
+                    <!-- End of what-cards -->
+                    <div class="what-cards">
+                        <div class="imgBx">
+                            <div>
+                                <img src="images/gas-mask.png" alt="">
+                                <h2>Art Style 1</h2>
+                            </div>
+                            <!-- End of div -->
+                        </div>
+                        <!-- End of imgBx -->
+                        <div class="overlay"></div>
+                        <div class="what-content">
+                                <h2>Art Style 2</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, possimus atque impedit quibusdam eveniet tenetur voluptates iste vel unde nemo? Debitis cum quis tenetur temporibus repellendus similique quasi quidem corrupti?</p>
+                        </div>
+                        <!-- End of what-content -->
+                    </div>
+                    <!-- End of what-cards -->
+                    <div class="what-cards">
+                        <div class="imgBx">
+                            <div>
+                                <img src="images/mechanical-gears-.png" alt="">
+                                <h2>Art Style 1</h2>
+                            </div>
+                            <!-- End of div -->
+                        </div>
+                        <!-- End of imgBx -->
+                        <div class="overlay" id ="overlay"></div>
+                        <div class="what-content">
+                                <h2>Art Style 3</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor eaque laborum ex itaque officia placeat, pariatur praesentium aliquam nemo debitis repellat. Facilis, doloribus neque. Unde odit ratione quaerat doloribus.</p>
+                        </div>
+                        <!-- End of what-content -->
+                    </div>
+                    <!-- End of what-cards -->
+                </div>
+                <!-- End of what-container -->
             </section>
-            <section class="sec-three-container">
+            <!-- End of what-i-do -->
 
+            <section class="gallery" id="gallery">
+                <div class="gallery-content">
+                    <h1>Gallery</h1>
+                    <hr>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-cell">
+                        <img src="images/nspeier.png" alt="orange tree" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/nspeier2.png" alt="drizzle" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/nspeier3.png" alt="cat nose" />
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/nspeier4.png" alt="contrail" />
+                    </div>
+                </div>
+            </section>            
+            
+            <section class="connect" id="connect">
+                <div class="connect-content">
+                    <h1>Connect With Me</h1>
+                    <hr>
+                </div>
+                <!-- End of connect-content -->
             </section>
+            <!-- End of connect -->
         </div>
     </main>
 
@@ -93,6 +191,7 @@
         <div class="main-footer-container">
 
         </div>
+        <!-- End of main-footer-container -->
     </footer>
 
 <script src="js/flickity.js"></script>

@@ -20,17 +20,18 @@ li {
 
 .main-nav {
   padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .main-header-container {
   padding: 0 5%;
 }
 
-.main-container,
+.about-me,
+.what-i-do,
+.gallery,
+.connect,
 .main-footer-container {
-  padding: 3% 5%;
+  padding: 3%;
 }
 
 /* Font Styles */
@@ -41,10 +42,15 @@ h4,
 h5,
 h6 {
   font-family: "Rokkitt", serif;
+  color: #E71D36;
 }
 
 body {
   font-family: "Muli", sans-serif;
+}
+
+hr {
+  width: 15rem;
 }
 
 /* Navigation */
@@ -64,11 +70,168 @@ body {
   width: 100%;
   text-align: center;
   padding: 0.5rem 0.75rem;
+  background-color: #E71D36;
+  color: #FDFFFC;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #2EC4B6;
 }
 
 /* Main Header */
+.main-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/nspeier.png) fixed center no-repeat;
+  background-size: cover;
+  height: 75vh;
+  min-height: 500px;
+}
+
+.header-content {
+  padding-top: 35vh;
+}
+
+.header-content p {
+  color: #FDFFFC;
+}
+
+/* About Me */
+/* What I Do */
+.what-container .what-cards {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-container .what-cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.what-container .what-cards:nth-child(1) {
+  background: linear-gradient(90deg, #2EC4B6, #FDFFFC);
+}
+
+.what-container .what-cards:nth-child(2) {
+  background: linear-gradient(90deg, #E71D36, #FDFFFC);
+}
+
+.what-container .what-cards:nth-child(3) {
+  background: linear-gradient(90deg, #FF9F1C, #FDFFFC);
+}
+
+.what-container .what-cards:nth-child(1) .overlay,
+.what-container .what-cards:nth-child(2) .overlay,
+.what-container .what-cards:nth-child(3) .overlay {
+  border: 2px solid #2EC4B6;
+}
+
+.what-container .what-cards .imgBx div img {
+  width: 50%;
+}
+
+.what-container .what-cards .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.what-container .what-cards .imgBx h2 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #FDFFFC;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.what-container .what-cards .overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #FDFFFC;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.what-container .what-cards .overlay:hover {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  opacity: 0.9;
+  border-radius: 0;
+}
+
+.what-container .what-cards .overlay:before {
+  content: "Read";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #E71D36;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-delay: 0.5s;
+}
+
+.what-container .what-cards .overlay:hover:before {
+  display: none;
+  transition-delay: 0;
+}
+
+.what-container .what-cards .what-content {
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s;
+}
+
+.what-container .what-cards .overlay:hover ~ .what-content {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+  transition-delay: 0.4s;
+}
+
+.what-container .what-cards .what-content h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Carousel */
 .carousel {
-  background: url("../images/header.jpg") no-repeat center;
+  background: #FDFFFC;
   background-size: cover;
 }
 
@@ -85,9 +248,7 @@ body {
 /* Media Queries */
 @media only screen and (min-width: 600px) {
   .main-nav {
-    padding-top: 5%;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-top: 2rem;
   }
 
   .main-header-container {
@@ -109,6 +270,13 @@ body {
     width: 20%;
     text-align: center;
     padding: 0.5rem 0.75rem;
+  }
+
+  .what-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 
