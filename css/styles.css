@@ -51,6 +51,7 @@ body {
 
 hr {
   width: 15rem;
+  margin: 1rem 0;
 }
 
 /* Navigation */
@@ -87,15 +88,43 @@ hr {
   min-height: 500px;
 }
 
+.main-header-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .header-content {
-  padding-top: 35vh;
+  padding-top: 25vh;
 }
 
 .header-content p {
   color: #FDFFFC;
 }
 
+.header-side-content {
+  margin-top: 1rem;
+}
+
+.header-side-content a {
+  border: 1px solid #2EC4B6;
+  background-color: #2EC4B6;
+  color: #FDFFFC;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-side-content a:hover {
+  background-color: #E71D36;
+  border: 1px solid #E71D36;
+}
+
 /* About Me */
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+
 /* What I Do */
 .what-container .what-cards {
   position: relative;
@@ -252,12 +281,32 @@ hr {
   }
 
   .main-header-container {
-    padding: 0 8%;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
   }
 
   .main-container,
 .main-footer-container {
     padding: 5% 8%;
+  }
+
+  .about-me {
+    flex-flow: row wrap;
+  }
+
+  .about-me-content,
+.about-me-side-content {
+    width: 50%;
+  }
+
+  .about-me-content {
+    flex: 0 0 48%;
+    margin-right: 2%;
+  }
+
+  .about-me-side-content img {
+    width: 100%;
   }
 
   .nav-flex-container {
