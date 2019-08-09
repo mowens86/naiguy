@@ -62,6 +62,8 @@ hr {
     margin: 1rem 0;
 }
 
+
+
 /* Navigation */
 
 .nav-logo {
@@ -109,6 +111,12 @@ hr {
     padding-top: 25vh;
 }
 
+.header-content h1,
+.header-content h3,
+.what-i-do-content h1 {
+    text-shadow: 1px 1px $theme-white;
+}
+
 .header-content p {
     color: $theme-white;
 }
@@ -118,8 +126,8 @@ hr {
 }
 
 .header-side-content a {
-    border: 1px solid $theme-aqua;
-    background-color: $theme-aqua;
+    border: 1px solid $theme-rose;
+    background-color: $theme-rose;
     color: $theme-white;
     border-radius: 5px;
     padding: .5rem 1rem;
@@ -127,24 +135,23 @@ hr {
 }
 
 .header-side-content a:hover {
-    background-color: $theme-rose;
-    border: 1px solid $theme-rose;
+    background-color: $theme-aqua;
+    border: 1px solid $theme-aqua;
 }
 
 /* About Me */
 .about-me {
     display: flex;
     flex-direction: column;
-    
 }
-
-
-
 
 
 /* What I Do */
 
-
+.what-i-do-container {
+    background: url(../images/header.png) fixed no-repeat;
+    background-size: cover;
+}
 
 .what-container .what-cards {
     position: relative;
@@ -154,6 +161,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .what-container .what-cards:before {
@@ -169,26 +177,27 @@ hr {
 }
 
 .what-container .what-cards:nth-child(1) {
-    background: linear-gradient(90deg,$theme-aqua,$theme-white);
+    background: linear-gradient(90deg,$theme-rose,$theme-rose);
 }
 
 .what-container .what-cards:nth-child(2) {
-    background: linear-gradient(90deg,$theme-rose,$theme-white);
+    background: linear-gradient(90deg,$theme-yellow,$theme-yellow);
 }
 
 .what-container .what-cards:nth-child(3) {
-    background: linear-gradient(90deg,$theme-yellow,$theme-white);
+    background: linear-gradient(90deg,$theme-aqua,$theme-aqua);
 }
 
 .what-container .what-cards:nth-child(1) .overlay,
 .what-container .what-cards:nth-child(2) .overlay,
 .what-container .what-cards:nth-child(3) .overlay {
-    border: 2px solid $theme-aqua;
+    border: 2px solid $theme-rose;
 }
 
 
-.what-container .what-cards .imgBx div img {
+.what-container .what-cards .imgBx div i {
     width: 50%;
+    color: $theme-white;
 }
 
 .what-container .what-cards .imgBx {
@@ -232,7 +241,7 @@ hr {
     height: 100%;
     box-shadow: none;
     opacity: 0.9;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .what-container .what-cards .overlay:before {
@@ -305,7 +314,7 @@ hr {
 @media only screen and (min-width: 600px) {
 
     .main-nav {
-        padding-top: 2rem;
+        padding-top: 1rem;
         
     }
 
@@ -315,9 +324,12 @@ hr {
         margin: 0 auto;
     }
     
-    .main-container,
+    .about-me-container,
+    .what-i-do-container,
+    .gallery-container,
+    .connect-container,
     .main-footer-container {
-        padding: 5% 8%;
+        padding: 1% 8%;
     }
 
     .about-me {
@@ -352,8 +364,17 @@ hr {
 
     .what-container {
         position: relative;
-        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+    }
+
+    .what-container .what-cards {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -97,6 +97,12 @@ hr {
   padding-top: 25vh;
 }
 
+.header-content h1,
+.header-content h3,
+.what-i-do-content h1 {
+  text-shadow: 1px 1px #FDFFFC;
+}
+
 .header-content p {
   color: #FDFFFC;
 }
@@ -106,8 +112,8 @@ hr {
 }
 
 .header-side-content a {
-  border: 1px solid #2EC4B6;
-  background-color: #2EC4B6;
+  border: 1px solid #E71D36;
+  background-color: #E71D36;
   color: #FDFFFC;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -115,8 +121,8 @@ hr {
 }
 
 .header-side-content a:hover {
-  background-color: #E71D36;
-  border: 1px solid #E71D36;
+  background-color: #2EC4B6;
+  border: 1px solid #2EC4B6;
 }
 
 /* About Me */
@@ -126,6 +132,11 @@ hr {
 }
 
 /* What I Do */
+.what-i-do-container {
+  background: url(../images/header.png) fixed no-repeat;
+  background-size: cover;
+}
+
 .what-container .what-cards {
   position: relative;
   width: 100%;
@@ -134,6 +145,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .what-container .what-cards:before {
@@ -149,25 +161,26 @@ hr {
 }
 
 .what-container .what-cards:nth-child(1) {
-  background: linear-gradient(90deg, #2EC4B6, #FDFFFC);
+  background: linear-gradient(90deg, #E71D36, #E71D36);
 }
 
 .what-container .what-cards:nth-child(2) {
-  background: linear-gradient(90deg, #E71D36, #FDFFFC);
+  background: linear-gradient(90deg, #FF9F1C, #FF9F1C);
 }
 
 .what-container .what-cards:nth-child(3) {
-  background: linear-gradient(90deg, #FF9F1C, #FDFFFC);
+  background: linear-gradient(90deg, #2EC4B6, #2EC4B6);
 }
 
 .what-container .what-cards:nth-child(1) .overlay,
 .what-container .what-cards:nth-child(2) .overlay,
 .what-container .what-cards:nth-child(3) .overlay {
-  border: 2px solid #2EC4B6;
+  border: 2px solid #E71D36;
 }
 
-.what-container .what-cards .imgBx div img {
+.what-container .what-cards .imgBx div i {
   width: 50%;
+  color: #FDFFFC;
 }
 
 .what-container .what-cards .imgBx {
@@ -211,7 +224,7 @@ hr {
   height: 100%;
   box-shadow: none;
   opacity: 0.9;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .what-container .what-cards .overlay:before {
@@ -277,7 +290,7 @@ hr {
 /* Media Queries */
 @media only screen and (min-width: 600px) {
   .main-nav {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
   .main-header-container {
@@ -286,9 +299,12 @@ hr {
     margin: 0 auto;
   }
 
-  .main-container,
+  .about-me-container,
+.what-i-do-container,
+.gallery-container,
+.connect-container,
 .main-footer-container {
-    padding: 5% 8%;
+    padding: 1% 8%;
   }
 
   .about-me {
@@ -323,9 +339,18 @@ hr {
 
   .what-container {
     position: relative;
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+
+  .what-container .what-cards {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
