@@ -149,7 +149,7 @@ hr {
 /* What I Do */
 
 .what-i-do-container {
-    background: url(../images/header.png) fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),url(../images/header.png) fixed no-repeat;
     background-size: cover;
 }
 
@@ -162,6 +162,7 @@ hr {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px $theme-white;
 }
 
 .what-container .what-cards:before {
