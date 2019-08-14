@@ -1,5 +1,7 @@
-// external js: flickity.pkgd.js
 // jshint esversion:6
+
+
+// external js: flickity.pkgd.js
 
 const carousel = document.querySelector('.carousel');
 const flkty = new Flickity( carousel, {
@@ -21,3 +23,20 @@ flkty.on( 'scroll', () => {
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
 });
+
+
+// Sticky Navbar
+
+// When the user scrolls the page, execute myFunction 
+window.onscroll = () => { myFunction() };
+
+// Get the navbar
+const navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+const sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+myFunction = () => {
+  window.pageYOffset >= sticky ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
+}

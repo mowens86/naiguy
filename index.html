@@ -22,7 +22,7 @@
             </a>
             
         </div>
-        <ul class="nav-flex-container">
+        <ul class="nav-flex-container" id="navbar">
             <a href="#" class="nav-link">
                 <li>
                     <i class="fas fa-home"></i>
@@ -169,37 +169,66 @@
                     </div>
                     <div class="carousel">
                         <div class="carousel-cell">
-                            <img src="images/nspeier.png" alt="orange tree" />
+                            <img src="images/nspeier.png" alt="one" />
                         </div>
                         <div class="carousel-cell">
-                            <img src="images/nspeier2.png" alt="drizzle" />
+                            <img src="images/nspeier2.png" alt="two" />
                         </div>
                         <div class="carousel-cell">
-                            <img src="images/nspeier3.png" alt="cat nose" />
+                            <img src="images/nspeier3.png" alt="three" />
                         </div>
                         <div class="carousel-cell">
-                            <img src="images/nspeier4.png" alt="contrail" />
+                            <img src="images/nspeier4.png" alt="four" />
                         </div>
                     </div>
                 </div>  
             </section>            
             
             <section class="connect-container">
-                <div class="connect" id="connect">
-                    <div class="connect-content">
-                        <h1>Connect With Me</h1>
-                        <hr>
+                <div class="connect-flex">
+                    <div class="connect" id="connect">
+                        <div class="connect-content">
+                            <h1>Connect With Me</h1>
+                            <hr>
+                            <a href="https://www.instagram.com/nspeier/?hl=en" class="connect-link" target="_blank">
+                                <i class="fab fa-instagram fa-4x"></i>
+                            </a>
+                            <a href="#" class="connect-link" target="_blank">
+                                <i class="fab fa-facebook-square fa-4x"></i>
+                            </a>
+                            <a href="#" class="connect-link" target="_blank">
+                                <i class="fas fa-paper-plane fa-4x"></i>
+                            </a>
+                        </div>
+                        <!-- End of connect-content -->
                     </div>
-                    <!-- End of connect-content -->
-                </div>  
+                    <div class="form-section">
+                        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/mocoding86@gmail.com" method="post">
+                            <fieldset class="form-flex" id="fs-frm-inputs">
+                                <label for="full-name">Contact Me</label>
+                                <input type="text" name="name" id="full-name" placeholder="Name" required="">
+                                <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                                <textarea rows="2" name="message" id="message" placeholder="Message" required=""></textarea>
+                                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                                <input class="form-btn" type="submit" value="Submit">
+                            </fieldset>
+                            
+                        </form>
+                    </div>
+                    <!-- End of form-section -->
+                </div>
+                <!-- End of connect-flex -->
             </section>
             <!-- End of connect -->
         </div>
+        <!-- End of main-container -->
     </main>
 
     <footer class="main-footer">
         <div class="main-footer-container">
-
+            <div class="main-footer-content">
+                <p>© Copyright 2019, All Rights Reserved.</p>
+            </div>  
         </div>
         <!-- End of main-footer-container -->
     </footer>

@@ -36,7 +36,7 @@ li {
 .about-me,
 .what-i-do,
 .gallery,
-.connect,
+.connect-flex,
 .main-footer-container {
     padding: 3%;
 }
@@ -65,6 +65,13 @@ hr {
 
 
 /* Navigation */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+  }
 
 .nav-logo {
     display: block;
@@ -113,7 +120,8 @@ hr {
 
 .header-content h1,
 .header-content h3,
-.what-i-do-content h1 {
+.what-i-do-content h1,
+.connect-content h1 {
     text-shadow: 1px 1px $theme-white;
 }
 
@@ -140,9 +148,24 @@ hr {
 }
 
 /* About Me */
-.about-me {
+.about-me,
+.connect-flex {
     display: flex;
     flex-direction: column;
+}
+
+.about-me-content,
+.what-i-do-content,
+.gallery-content,
+.connect-content {
+    text-align: center;
+ }
+
+ .about-me-content hr,
+.what-i-do-content hr,
+.gallery-content hr,
+.connect-content hr {
+    margin: 1rem auto;
 }
 
 
@@ -189,10 +212,18 @@ hr {
     background: linear-gradient(90deg,$theme-aqua,$theme-aqua);
 }
 
-.what-container .what-cards:nth-child(1) .overlay,
-.what-container .what-cards:nth-child(2) .overlay,
-.what-container .what-cards:nth-child(3) .overlay {
+.what-container .what-cards:nth-child(1) .overlay {
     border: 2px solid $theme-rose;
+}
+
+
+.what-container .what-cards:nth-child(2) .overlay {
+    border: 2px solid $theme-yellow;
+}
+
+
+.what-container .what-cards:nth-child(3) .overlay {
+    border: 2px solid $theme-aqua;
 }
 
 
@@ -291,6 +322,7 @@ hr {
 }
 
 
+
 /* Carousel */
 
 .carousel {
@@ -308,6 +340,82 @@ hr {
     display: block;
     height: 35vh;
   }
+
+/* Connect With Me */
+.connect-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),url(../images/footer.png) fixed no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+.connect-link i {
+    color: $theme-white;
+    padding: 0 .5rem;
+    transition: .3s all ease-out;
+}
+
+.connect-link i:hover {
+    color: $theme-yellow;
+}
+
+/* Form Section */
+.form-flex {
+    display: flex;
+    text-align: center;
+}
+
+fieldset,
+fieldset input,
+fieldset textarea {
+    border-radius: 5px;
+    border: none;
+}
+
+.form-flex label,
+.form-flex input,
+.form-flex textarea {
+    margin: .5rem auto;
+    padding: .5rem;
+    width: 50%;
+    font-family: 'Muli', sans-serif;
+}
+
+.form-flex label {
+    font-size: 1.5rem;
+    color: $theme-white;
+}
+
+.form-flex textarea {
+    margin-bottom: 1rem;
+    resize: none;
+}
+
+fieldset .form-btn {
+    margin-bottom: 2rem;
+    background-color: $theme-yellow;
+    color: $theme-white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: .4s all ease-in-out;
+}
+
+fieldset .form-btn:hover {
+    background-color: $theme-aqua;
+}
+
+.form-section form {
+    border-radius: 5px;
+    background: linear-gradient(to right, $theme-white);
+   
+}
+
+.main-footer-content {
+    text-align: center;
+}
 
 
 /* Media Queries */
@@ -333,22 +441,36 @@ hr {
         padding: 1% 8%;
     }
 
-    .about-me {
+    .about-me,
+    .connect-container .connect-flex {
         flex-flow: row wrap;
     }
 
     .about-me-content,
-    .about-me-side-content {
+    .about-me-side-content,
+    .connect,
+    .form-section {
         width: 50%;
     }
-
-    .about-me-content {
+    
+    .about-me-content,
+    .connect-content {
         flex: 0 0 48%;
         margin-right: 2%;
     }
 
-    .about-me-side-content img {
-        width: 100%;
+    .about-me-content,
+    .what-i-do-content,
+    .gallery-content,
+    .connect-content {
+        text-align: left;
+    }
+
+    .about-me-content hr,
+    .what-i-do-content hr,
+    .gallery-content hr,
+    .connect-content hr {
+        margin: 1rem 0;
     }
 
     .nav-flex-container {
@@ -378,4 +500,9 @@ hr {
         justify-content: center;
         align-items: center;
     }
+
+    .form-section form {
+        width: 80%;  
+    }
+
 }
