@@ -25,6 +25,16 @@ li {
     list-style-type: none;
 }
 
+::selection {
+    background: $theme-yellow;
+    /* WebKit/Blink Browsers */
+  }
+  
+  ::-moz-selection {
+    background: #D90429;
+    /* Gecko Browsers */
+  }
+
 .main-nav {
     padding-top: 5%;
 }
@@ -66,12 +76,30 @@ hr {
 
 /* Navigation */
 
+#arrow-btn {
+    display: none;
+    position: fixed;
+    left: 30px; 
+    z-index: 99; 
+    border: 1px solid $theme-white; 
+    outline: none; 
+    background-color: $theme-white; 
+    color: $theme-rose; 
+    cursor: pointer; 
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+  }
+
+  #arrow-btn:hover {
+    color: $theme-aqua;
+  }
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 20;
-  }
+    z-index: 100;
+}
 
 .nav-logo {
     display: block;

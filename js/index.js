@@ -25,18 +25,45 @@ flkty.on( 'scroll', () => {
 });
 
 
-// Sticky Navbar
+// Sticky Navbar && Arrow
 
 // When the user scrolls the page, execute myFunction 
 window.onscroll = () => { myFunction() };
 
 // Get the navbar
 const navbar = document.getElementById("navbar");
+let arrow = document.getElementById("arrow-btn");
 
 // Get the offset position of the navbar
 const sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 myFunction = () => {
-  window.pageYOffset >= sticky ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
+
+  // Is windows y-axis offset greater than or equal to navbar: true = add sticky class, false = remove sticky class 
+  window.pageYOffset >= sticky ? (navbar.classList.add("sticky"), arrow.style.display = "block") 
+  : (navbar.classList.remove("sticky"), arrow.style.display = "none");
+
+
+};
+
+const topFunction = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+// Animated Arrow Button
+
+const refreshRate = 1000 / 60;
+const maxYPosition = 100;
+let speedY = 3;
+let positionY = 0;
+function step() {
+  positionY = positionY + speedY;
+  if (positionY > maxYPosition || positionY < 0) {
+    speedY = speedY * (-1);
+  }
+  arrow.style.bottom = `${positionY}px`;
+  window.requestAnimationFrame(step);
 }
+window.requestAnimationFrame(step);
