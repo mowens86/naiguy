@@ -1,6 +1,5 @@
 // jshint esversion:6
 
-
 // external js: flickity.pkgd.js
 
 const carousel = document.querySelector('.carousel');
@@ -67,3 +66,32 @@ function step() {
   window.requestAnimationFrame(step);
 }
 window.requestAnimationFrame(step);
+
+// Hamburger Bar
+const hamburgerBtn = document.querySelector(".hamburger");
+const navBar = document.querySelector(".nav-flex-container");
+
+hamburgerBtn.addEventListener("click", () => {
+  
+  // On click toggle active class
+  hamburgerBtn.classList.toggle("is-active");
+
+  // Create if statement to make nav-links display or not
+  hamburgerBtn.classList.contains("is-active") ? navBar.style.display = "flex" : navBar.style.display = "none";
+});
+
+
+// Check for view width to bring back navbar
+let lastState = false;
+function checkForViewportChange () {
+    const state = window.matchMedia("(min-width: 600px)").matches;
+    if (state != lastState) {
+        if (state) {
+          navBar.style.display = "flex";
+        } else {
+          navBar.style.display = "none";
+        }
+        lastState = state;
+}}
+
+window.setInterval (checkForViewportChange, 150);

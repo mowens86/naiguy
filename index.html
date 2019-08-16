@@ -11,6 +11,8 @@
     <title>NSpeier</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Hamburger -->
+    <link href="css/hamburgers.css" rel="stylesheet">
     <!-- Flickity Carousel -->
     <link rel="stylesheet" href="css/flickity.css" media="screen">
 </head>
@@ -18,10 +20,24 @@
     <nav class="main-nav">
         <div class="nav-logo">
             <a href="" >
-                <img src="images/logo.png" alt="Nai Logo" title="Nai Logo">
+                <img src="images/logo.png" alt="NSpeier Logo" title="NSpeier Logo">
             </a>
-            
         </div>
+        <!-- End of nav-logo -->
+        
+        <div class="hamburger-container">
+            <div class="hamburger-label">
+                <label>Menu</label>
+            </div>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            
+        </div> 
+        <!-- End of hamburger-container -->
+
         <ul class="nav-flex-container" id="navbar">
             <a href="#" class="nav-link">
                 <li>
@@ -58,6 +74,8 @@
     </nav>
     <!-- End of main-nav -->
 
+
+    <!-- Arrow Top Button -->
     <button onclick="topFunction()" id="arrow-btn">
         <i class="fas fa-arrow-circle-up fa-4x"></i>
     </button>
