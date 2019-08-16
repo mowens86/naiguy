@@ -205,11 +205,15 @@ hr {
     text-align: center;
  }
 
- .about-me-content hr,
+.about-me-content hr,
 .what-i-do-content hr,
 .gallery-content hr,
 .connect-content hr {
     margin: 1rem auto;
+}
+
+.about-me-side-content img {
+    width: 100%;
 }
 
 
