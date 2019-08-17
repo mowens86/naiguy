@@ -159,7 +159,7 @@ hr {
 
 
 .header-content {
-    padding-top: 25vh;
+    padding-top: 15vh;
 }
 
 .header-content h1,
@@ -479,6 +479,10 @@ fieldset .form-btn:hover {
         text-align: center;
         max-width: 50%;
         margin: 0 auto;
+    }
+
+    .header-content {
+        padding-top: 25vh;
     }
     
     .about-me-container,
