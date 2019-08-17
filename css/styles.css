@@ -130,7 +130,7 @@ hr {
 .main-header {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url(../images/nspeier.png) fixed center no-repeat;
   background-size: cover;
-  height: 75vh;
+  height: 50vh;
   min-height: 500px;
 }
 
@@ -435,6 +435,10 @@ fieldset .form-btn:hover {
 @media only screen and (min-width: 600px) {
   .main-nav {
     padding-top: 0.5rem;
+  }
+
+  .main-header {
+    height: 75vh;
   }
 
   .main-header-container {
